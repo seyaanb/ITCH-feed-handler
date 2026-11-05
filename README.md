@@ -1,8 +1,8 @@
-# Zero-Copy NASDAQ ITCH 5.0 Feed Handler
+# NASDAQ ITCH 5.0 Feed Handler
 
 C++20 feed handler for reading NASDAQ ITCH 5.0 traffic from a PCAP file and passing parsed messages through a lock-free SPSC ring buffer.
 
-The main idea is pretty simple: map the PCAP into memory, walk the packets in place, decode the fields we care about, and avoid allocating or copying messages along the way.
+The main idea is pretty simple: map the PCAP into memory, walk the packets in place, decode the fields we care about, and avoid allocating along the way.
 
 This is Linux/x86-oriented code. It is deliberately not trying to be a portable packet parsing library.
 
